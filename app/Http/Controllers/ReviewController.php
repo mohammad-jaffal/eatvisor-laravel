@@ -58,5 +58,12 @@ class ReviewController extends Controller
     }
 
 
+    public function declineReview(Request $request){
+        Review::where('review_id',$request->review_id)->delete();
+        
+        return response()->json([
+            "success" => true,
+        ], 200);
+    }
 
 }
