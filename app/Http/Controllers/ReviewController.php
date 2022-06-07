@@ -24,7 +24,13 @@ class ReviewController extends Controller
     }
     
 
-
+    public function getRestoReviews(Request $request){
+        $reviews = Review::all()->where('restaurants_restaurant_id', $request->restaurant_id);
+        return response()->json([
+            "success" => true,
+            "reviews" => $reviews
+        ], 200);
+    }
 
 
 }
