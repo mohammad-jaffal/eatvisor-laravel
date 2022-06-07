@@ -15,7 +15,7 @@ Route::post('/signUp', [UserController::class, 'signUp']);
 
 Route::get('/getRestos', [RestaurantController::class, 'getRestaurants']);
 Route::post('/getResto', [RestaurantController::class, 'getRestoById']);
-// Route::post('/signUp', [UserController::class, 'signUp']);
+Route::post('/addResto', [RestaurantController::class, 'addRestaurant']);
 
 
 
