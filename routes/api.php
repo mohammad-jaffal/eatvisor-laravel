@@ -13,7 +13,7 @@ Route::post('/logIn', [UserController::class, 'logIn']);
 Route::post('/signUp', [UserController::class, 'signUp']);
 
 
-Route::get('/getRestaurants', [RestaurantController::class, 'getRestaurants']);
+Route::get('/getRestos', [RestaurantController::class, 'getRestaurants']);
 Route::post('/getResto', [RestaurantController::class, 'getRestoById']);
 // Route::post('/signUp', [UserController::class, 'signUp']);
 

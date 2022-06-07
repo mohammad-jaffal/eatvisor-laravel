@@ -14,4 +14,20 @@ class RestaurantController extends Controller
             "restaurant" => $restaurant
         ], 200);
     }
+
+
+    public function getRestoById(Request $request){
+        $restaurant_id = $request->restaurant_id;
+        $restaurant = Restaurant::find($restaurant_id);
+       
+        return response()->json([
+            "success" => true,
+            "restaurant" => $restaurant
+        ], 200);
+    }
+
+
+
+
+
 }
