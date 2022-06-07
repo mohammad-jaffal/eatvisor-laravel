@@ -7,9 +7,9 @@ use App\Http\Controllers\AdminController;
 
 
 
-Route::get('/getRestos', [UserController::class, 'getRestos']);
+Route::get('/getUsers', [UserController::class, 'getUsers']);
+Route::post('/getUser', [UserController::class, 'getUserById']);
 
-Route::get('/getUsers', [AdminController::class, 'getUsers']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
