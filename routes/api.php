@@ -23,6 +23,9 @@ Route::post('/addResto', [RestaurantController::class, 'addRestaurant']);
 Route::get('/getReviews', [ReviewController::class, 'getReviews']);
 Route::post('/getUserReviews', [ReviewController::class, 'getUserReviews']);
 Route::post('/getRestoReviews', [ReviewController::class, 'getRestoReviews']);
+Route::post('/addReview', [ReviewController::class, 'addReview']);
+Route::post('/acceptReview', [ReviewController::class, 'acceptReview']);
+Route::post('/declineReview', [ReviewController::class, 'declineReview']);
 
 
 
