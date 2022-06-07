@@ -12,6 +12,8 @@ Route::get('/getUsers', [UserController::class, 'getUsers']);
 Route::post('/getUser', [UserController::class, 'getUserById']);
 Route::post('/logIn', [UserController::class, 'logIn']);
 Route::post('/signUp', [UserController::class, 'signUp']);
+Route::post('/editProfile', [UserController::class, 'editProfile']);
+
 
 
 Route::get('/getRestos', [RestaurantController::class, 'getRestaurants']);

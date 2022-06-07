@@ -67,6 +67,20 @@ class UserController extends Controller{
     }
  
 
+    public function editProfile(Request $request){
+        if(isset($request->bio)){
+            echo "biooo";
+            User::where('user_id',$request->user_id)->update(['user_bio'=>$request->bio]);
+        }
+        if(isset($request->pic)){
+            echo "piccccccc";
+            User::where('user_id',$request->user_id)->update(['profile_picture'=>$request->pic]);
+        }
+        
+        return response()->json([
+            "success" => true,
+        ], 200);
+    }
     
 
 
