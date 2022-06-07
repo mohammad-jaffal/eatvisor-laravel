@@ -46,7 +46,16 @@ class ReviewController extends Controller
             "success" => true,
         ], 200);
     }
+    
 
+
+    public function acceptReview(Request $request){
+        Review::where('review_id',$request->review_id)->update(['approved'=>1]);
+        
+        return response()->json([
+            "success" => true,
+        ], 200);
+    }
 
 
 
